@@ -1,0 +1,117 @@
+.modal-period {
+    position: fixed;
+    width: 100%;
+    max-width: 690px;
+    max-height: 432px;
+    top: calc(50% - 250px);
+    left: calc(50% - 345px);
+    z-index: 4;
+
+    h1 {
+        font-size: 24px;
+        font-weight: 700;
+        line-height: 30px;
+        letter-spacing: -0.025em;
+    }
+
+    p:last-of-type {
+        color: $blacke_color;
+    }
+
+    h3 {
+        font-size: 14px;
+        font-weight: 600;
+        line-height: 17px;
+        letter-spacing: 0.02em;
+
+        span {
+            font-weight: 400;
+        }
+    }
+
+    .period-window {
+        display: none;
+        top: 0;
+        left: 0;
+        width: 100%;
+        position: relative;
+
+        .period-close-svg {
+            position: absolute;
+            top: 30px;
+            left: 20px;
+            cursor: pointer;
+            display: none;
+        }
+    }
+
+    .active-window {
+        display: block;
+        opacity: 1;
+        visibility: visible;
+    }
+
+    .period-window-2 {
+        form {
+            text-align: center;
+        }
+
+        button {
+            max-width: 200px;
+            height: 46px;
+        }
+    }
+
+}
+
+@media (max-width :768px) {
+    .modal-period {
+        position: fixed;
+        max-width: 100%;
+        max-height: 100vh;
+        z-index: 4;
+        top: 30px;
+        left: 0;
+
+        h2 {
+            font-size: 18px;
+            font-weight: 700;
+            line-height: 22px;
+            letter-spacing: -0.025em;
+        }
+        .period-window {
+        .period-close-svg {
+            display: block;
+        }
+    }
+            
+        p:last-of-type {
+            color: $blacke_color;
+        }
+
+        h3 {
+            font-size: 14px;
+            font-weight: 600;
+            line-height: 17px;
+            letter-spacing: 0.02em;
+
+            span {
+                font-weight: 400;
+            }
+        }
+
+        .period-window-2 {
+            form {
+                text-align: center;
+            }
+
+            button {
+                max-width: 200px;
+                height: 46px;
+            }
+        }
+
+    }
+}
+
+@media (max-width :576px) {}

@@ -1,0 +1,90 @@
+.brands {
+    margin-top: 140px;
+    &__lines {
+        overflow: hidden;
+        img{
+            margin-top: 7px;
+            position: relative;
+        }
+    }
+    &__logo {
+        display: flex;
+        overflow: hidden;
+        align-items: center;
+        margin-top: 10px;
+        .logo-item{
+            min-width: 320px;
+            position: relative;
+            left: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            &::after{
+                content: "";
+                height: 97px;
+                width: 1px;
+                background: rgba(233, 235, 238, 1);
+                display: block;
+                position: absolute;
+                right: 0;
+                top: 0;
+            }
+            &:last-child::after{
+                display: none;
+            }
+        }
+    }
+    &__btns{
+        display: flex;
+        justify-content: space-between;
+    }
+    &__btn{
+        margin: 10px 0;
+        fill: $base_blue_color;
+        cursor: pointer;
+        &:nth-child(1){
+            transform: rotate(180deg);
+        }
+    }
+    .not-active{
+        fill: rgba(233, 235, 238, 1);
+        cursor: auto;
+    }
+}
+@media (max-width : 992px){
+    .brands {
+        margin-top: 60px;
+    }
+  .brands__btns{
+        display: none;
+    }
+    .logo-item{
+        animation: slider 30s linear infinite;
+    }
+
+    @keyframes slider {
+        0% {
+          transform: translateX(0);
+        }
+      
+        50% {
+          transform: translateX(-2300px);
+        }
+
+        100% {
+            transform: translateX(0);
+          }
+      }
+}
+
+@media (max-width : 576px) {
+    
+    .brands__logo {
+        .logo-item{
+            padding: 0 60px;
+            &::after{
+                display: none;
+            }
+        }
+}
+}

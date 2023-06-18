@@ -1,0 +1,169 @@
+.modal-consultation {
+    position: fixed;
+    width: 100%;
+    max-width: 690px;
+    max-height: 432px;
+    top: calc(50% - 250px);
+    left: calc(50% - 345px);
+    z-index: 4;
+
+    .consultation__form {
+        .other {
+            display: none;
+        }
+
+        h3 {
+            font-size: 14px;
+            font-weight: 600;
+            line-height: 17px;
+            letter-spacing: 0.02em;
+
+            span {
+                font-weight: 400;
+            }
+        }
+
+        .consultation-window {
+            display: none;
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: 3;
+        }
+
+        .window-active {
+            display: block;
+        }
+
+        .consultation-window-3 {
+            width: 100%;
+
+            .radio {
+                display: flex;
+            }
+
+            .column {
+                width: 50%;
+            }
+
+            .radio+input {
+                margin-top: 30px;
+                margin-bottom: 0;
+                border: none;
+                border-bottom: 1px solid rgba(217, 217, 217, 1);
+            }
+        }
+
+        .dots {
+            margin: 20px 0;
+            max-width: 362px;
+
+            &::after {
+                z-index: 0;
+            }
+        }
+
+        .dot {
+            z-index: 2;
+
+            &:hover {
+                background: $base_blue_color;
+            }
+        }
+
+        .btn-group {
+            display: flex;
+            justify-content: space-between;
+
+            .basic-button-2 {
+                border: 1px solid $base_blue_color;
+            }
+
+            button {
+                width: 45%;
+                text-transform: uppercase;
+            }
+        }
+
+        button {
+            height: 60px;
+        }
+
+    }
+
+}
+
+.consultation-close-svg {
+    display: none;
+}
+
+@media (max-width :768px) {
+    .modal-consultation {
+        position: fixed;
+        width: 100%;
+        max-width: 100%;
+        max-height: 100%;
+        top: 0;
+        left: 0;
+        z-index: 4;
+
+        h2 {
+            font-size: 18px;
+            font-weight: 700;
+            line-height: 22px;
+            letter-spacing: -0.025em;
+        }
+    }
+
+    .consultation-close-svg {
+        display: block;
+        position: absolute;
+        top: 40px;
+        left: 20px;
+        cursor: pointer;
+    }
+
+}
+
+@media (max-width :576px) {
+
+    .modal-consultation {
+        position: fixed;
+        width: 100%;
+        max-width: 100%;
+        max-height: 100%;
+        top: 0;
+        left: 0;
+        z-index: 4;
+
+        h2 {
+            font-size: 18px;
+            font-weight: 700;
+            line-height: 22px;
+            letter-spacing: -0.025em;
+        }
+
+        .consultation__form {
+            .consultation-window-3 {
+                width: 100%;
+
+                .radio {
+                    display: block;
+                    overflow-y: scroll;
+                }
+
+                .column {
+                    width: 100%;
+                }
+            }
+            .btn-group {
+                display: flex;
+                justify-content: space-between;
+                width: 90%;
+                position: absolute;
+                bottom: 30px;
+            }
+        }
+    }
+
+}

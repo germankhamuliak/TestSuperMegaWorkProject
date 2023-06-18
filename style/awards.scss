@@ -1,0 +1,135 @@
+.awards {
+    margin-top: 120px;
+
+    .container {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__info {
+        width: 35%;
+        padding: 56px 62px 203px 45px;
+        background: rgba(20, 24, 41, 1);
+        color: $white_color;
+
+        .section-title {
+            h2 {
+                color: $white_color;
+            }
+
+        }
+
+        p {
+            margin-top: 41px;
+            font-size: 16px;
+            font-weight: 400;
+            line-height: 20px;
+            letter-spacing: 0.03em;
+            color: $white_color;
+        }
+    }
+
+    &__slider {
+        width: 60%;
+        display: flex;
+        position: relative;
+        overflow: hidden;
+    }
+
+    &__slide {
+        min-width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: space-around;
+        position: relative;
+        left: 0;
+
+        img {
+            margin-top: 30px;
+        }
+    }
+
+    &__btns {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        width: 5%;
+
+        .awards__btn {
+            margin: 10px 0;
+            fill: $base_blue_color;
+            cursor: pointer;
+
+            &:nth-child(2) {
+                transform: rotate(180deg);
+            }
+        }
+
+        .not-active {
+            fill: rgba(233, 235, 238, 1);
+            cursor: auto;
+        }
+    }
+}
+
+
+@media (max-width :992px) {
+    .awards {
+        margin-top: 60px;
+
+        .container {
+            display: block;
+        }
+
+        &__info {
+            width: 100%;
+            padding: 56px 62px 203px 45px;
+        }
+
+        &__slider {
+            width: 100%;
+            flex-wrap: wrap;
+            overflow: visible;
+        }
+
+        &__slide {
+            margin-top: 30px;
+        }
+
+        &__btns {
+            display: none;
+        }
+    }
+}
+
+@media (max-width :768px) {
+    .awards {
+        &__slider {
+            min-width: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            left: 0;
+
+            &:nth-child(3) {
+                min-width: 0;
+            }
+
+            img {
+                max-width: 100%;
+            }
+        }
+    }
+}
+
+@media (max-width :576px) {
+
+    .awards {
+        &__info {
+            width: 100%;
+            padding: 26px 30px 100px 23px;
+        }
+    }
+}
